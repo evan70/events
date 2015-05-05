@@ -69,21 +69,6 @@ class Filter
     {
         $t = strtotime ($t);
 
-        return gmdate ('g:ia', $t);
-    }
-    
-    public static function status ($status) {
-    	switch ($status) {
-    		case -1:
-    			return __ ('Cancelled');
-    		case 0:
-    			return __ ('Pending');
-    		case 1:
-    			return __ ('Complete');
-    		case 2:
-    			return __ ('Attended');
-    		default:
-    			return __ ('Unknown');
-    	}
+        return gmdate ('H:i', $t);
     }
 }
